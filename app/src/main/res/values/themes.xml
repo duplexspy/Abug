@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.FrameForge" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#FF0B0E14</item>
+        <item name="android:navigationBarColor">#FF0B0E14</item>
+        <item name="android:windowBackground">#FF0B0E14</item>
+    </style>
+</resources>

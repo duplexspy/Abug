@@ -1,0 +1,12 @@
+<resources>
+    <color name="black">#FF0B0E14</color>
+    <color name="surface_dark">#FF121722</color>
+    <color name="surface_variant">#FF1A202E</color>
+    <color name="primary_cyan">#FF00D2C4</color>
+    <color name="accent_blue">#FF0088FF</color>
+    <color name="accent_purple">#FF7B4DFF</color>
+    <color name="accent_amber">#FFFFAB00</color>
+    <color name="text_primary">#FFF0F4F8</color>
+    <color name="text_secondary">#FF8E9EB0</color>
+    <color name="ic_launcher_background">#FF1C99CF</color>
+</resources>
