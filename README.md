@@ -1,14 +1,15 @@
 # abug (🐞)
 
-> **Professional Offline AI Video Upscaler & Twixtor Frame Interpolation for Android**  
+> **Offline Open-Source AI Video Upscaler & Twixtor Frame Interpolation Studio for Mobile (Android) & Laptops**  
 > **Created by:** [duplexspy](https://t.me/effectcraftport)  
-> **Official Channel:** [https://t.me/effectcraftport](https://t.me/effectcraftport)
+> **Official Telegram:** [https://t.me/effectcraftport](https://t.me/effectcraftport)  
+> **GitHub Repository:** [https://github.com/duplexspy/Abug](https://github.com/duplexspy/Abug)
 
 ---
 
 ## 🌟 Overview
 
-**abug** is a high-performance, 100% offline neural video enhancement studio designed for Android devices. Powered by Real-ESRGAN and RIFE (Real-Time Intermediate Flow Estimation) optical flow networks, **abug** runs full neural super-resolution and cinematic high-framerate interpolation directly on your smartphone's hardware without sending any data to remote servers.
+**abug** is a high-performance, 100% offline and open-source neural video enhancement studio designed for mobile (Android) and laptop/desktop environments. Powered by **Real-ESRGAN** super-resolution and **RIFE** (Real-Time Intermediate Flow Estimation) optical flow networks, **abug** runs full neural super-resolution and cinematic high-framerate Twixtor interpolation directly on local device hardware without uploading any data to remote servers.
 
 ---
 
@@ -21,7 +22,7 @@
   * Zero server calls, zero telemetry, zero internet connection required.
 
 * **🚀 Ultra Multi-Core Parallel Engine**:
-  * **Phone Hardware Auto-Scan**: Automatically inspects CPU core topology and RAM headroom to select the maximum frames your phone can generate simultaneously (up to 8, 12, or 16 parallel frames).
+  * **Device Hardware Auto-Scan**: Automatically inspects CPU core topology and RAM headroom to select the maximum frames your device can generate simultaneously (up to 8, 12, or 16 parallel frames).
   * **True Simultaneous Frame Generation**: Uses isolated worker memory slots and dedicated multi-core thread pools without fake delays or sequential bottlenecking.
   * **Live Multi-Core Telemetry Grid**: Real-time visual display showing every concurrent worker slot generating frames in parallel.
 
@@ -37,7 +38,40 @@
 
 ---
 
-## 📱 Hardware Requirements
+## 💻 Running on Laptops & Desktops
+
+**abug** can be used on laptops and desktop PCs across Windows, Linux, and macOS:
+
+### 1. Windows Laptops (Windows 11 / 10)
+* **Windows Subsystem for Android (WSA)**:
+  * Enable Windows Subsystem for Android.
+  * Install the release APK via `adb install abug-v1.0.0.apk`.
+  * Runs with full Intel/AMD CPU multi-threading and GPU pass-through.
+* **Android Emulators (BlueStacks, LDPlayer, Nox)**:
+  * Open emulator settings and enable ARM64 translation and multi-core allocation.
+  * Drag and drop `abug-v1.0.0.apk` to install and run.
+
+### 2. Linux Laptops (Ubuntu, Fedora, Arch, Debian)
+* **Waydroid (Native Full-Speed Hardware Pass-through)**:
+  * Install Waydroid: `sudo apt install waydroid` (or your distro equivalent).
+  * Initialize Waydroid and install the APK: `waydroid app install abug-v1.0.0.apk`.
+  * Waydroid runs the Linux kernel container natively with direct Vulkan/OpenGL GPU acceleration at native laptop speeds.
+
+### 3. macOS Laptops (Apple Silicon M1 / M2 / M3 / M4)
+* **Android Studio / AVD Emulator**:
+  * Download Android Studio for Apple Silicon.
+  * Create an ARM64-v8a virtual device (Pixel 8 / Tablet) with Google Play.
+  * Start the emulator and run `adb install abug-v1.0.0.apk`.
+  * Runs with native ARM hypervisor acceleration at near-native speed.
+
+### 4. Native Desktop C++ Engine Architecture
+The core inference pipeline is written in portable, self-contained C++ (`RealEsrganEngine`, `RifeEngine`, `TileEngine`, `ColorConverter`) powered by Tencent NCNN:
+* Located in `app/src/main/cpp/`.
+* Can be compiled on any laptop OS (Linux, macOS, Windows) by linking against desktop `libncnn` and Vulkan SDK.
+
+---
+
+## 📱 Mobile Hardware Requirements
 
 * **Architecture**: ARM64-v8a
 * **Minimum Android Version**: Android 8.0 (API 26)
@@ -50,8 +84,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/effectcraft/abug.git
-cd abug
+git clone https://github.com/duplexspy/Abug.git
+cd Abug
 
 # Build Debug APK
 ./gradlew assembleDebug
@@ -66,11 +100,11 @@ cd abug
 
 Join the official Telegram channel for updates, model packs, presets, and community discussions:
 * **Telegram Channel**: [https://t.me/effectcraftport](https://t.me/effectcraftport)
-* **Author / Creator**: duplexspy
+* **Author / Creator**: [duplexspy](https://github.com/duplexspy)
 
 ---
 
 ## 📄 License
 
-Distributed under the Apache 2.0 License.
+Distributed under the Apache 2.0 License.  
 Real-ESRGAN and RIFE neural architectures are properties of their respective authors.
