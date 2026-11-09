@@ -38,6 +38,34 @@
 
 ---
 
+## 📖 How to Run (Quick Guide)
+
+> 📘 **Full Step-by-Step Guide**: Read [**HOW_TO_RUN.md**](HOW_TO_RUN.md) for detailed instructions, screenshots, and troubleshooting.
+
+### 📱 1. On Android Phones & Tablets
+1. Download the release APK: **[abug-v1.0.0.apk](https://github.com/duplexspy/Abug/releases/download/v1.0.0/abug-v1.0.0.apk)** (74 MB).
+2. Tap the downloaded `.apk` and allow installation from unknown sources if prompted.
+3. Open **abug** (🐞) and enjoy 100% offline neural video upscaling and Twixtor interpolation!
+
+### 💻 2. On Laptops & Desktops (Windows, macOS, Linux)
+#### Standalone Desktop Studio (One-Click)
+1. Download **[abug-standalone-v1.0.0.tar.gz](https://github.com/duplexspy/Abug/releases/download/v1.0.0/abug-standalone-v1.0.0.tar.gz)** (or clone this repo).
+2. Launch the studio:
+   - **Windows**: Double-click `standalone\run_desktop.bat` (or run `python standalone/abug_standalone.py`).
+   - **macOS / Linux**: Run `./standalone/run_desktop.sh`.
+3. Opens the interactive **abug Desktop Studio** at `http://localhost:54321` in your browser.
+
+#### Terminal CLI
+```bash
+# Upscale an image 4x:
+python3 standalone/abug_standalone.py upscale -i input.png -o output.png -s 4
+
+# Interpolate frames (Twixtor):
+python3 standalone/abug_standalone.py twixtor -f0 frame0.png -f1 frame1.png -o interp.png -t 0.5
+```
+
+---
+
 ## 💻 Running on Laptops & Desktops
 
 **abug** can be used on laptops and desktop PCs across Windows, Linux, and macOS:
