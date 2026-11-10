@@ -51,17 +51,29 @@ When opening **abug** for the first time:
 
 The standalone studio provides a local web-based graphical interface that runs on **Windows, macOS, and Linux laptops** with zero external dependencies.
 
-#### Option 1: From Release Package (Easiest)
-1. Download **[abug-standalone-v1.0.0.tar.gz](https://github.com/duplexspy/Abug/releases/download/v1.0.0/abug-standalone-v1.0.0.tar.gz)** from GitHub Releases.
-2. Extract the archive:
-   ```bash
-   tar -xzvf abug-standalone-v1.0.0.tar.gz
-   cd standalone
-   ```
-3. Run the studio:
-   - **On Windows**: Double-click `run_desktop.bat` (or run `python abug_standalone.py` in Command Prompt).
-   - **On macOS / Linux**: Double-click or run `./run_desktop.sh`.
-4. Your default web browser will automatically open to `http://localhost:54321`.
+#### Option 1: From Release Package (Easiest & Recommended)
+1. Download **[Abug-Studio.zip](https://github.com/duplexspy/Abug/releases/download/v1.0.0/Abug-Studio.zip)** (~64 MB) from GitHub Releases.
+2. Extract `Abug-Studio.zip` anywhere on your laptop.
+3. Launch the studio:
+   - **On macOS (Apple Silicon M1/M2/M3/M4 & Intel)**:
+     - **Option 1 (One-Click)**: Double-click `RUN_MAC_STUDIO.command` (or run `bash RUN_MAC_STUDIO.command` in Terminal). It compiles the native Apple Silicon engine if needed and opens **Google Chrome** automatically.
+     - **Option 2 (Terminal Command)**: Run:
+       ```bash
+       bash INSTALL_ABUG_COMMAND.command
+       source ~/.zshrc
+       abug
+       ```
+       After this one-time setup, simply type `abug` anywhere in Terminal to launch!
+   - **On Windows**: Double-click `run_desktop.bat` (or open Command Prompt and run `python abug_standalone.py`).
+   - **On Linux**: Double-click or run `./run_desktop.sh`.
+4. Your browser will automatically open to the studio at **`http://127.0.0.1:54322`**.
+
+> [!NOTE]
+> **Running Process Details & Upgrades**:
+> - **Port Management**: The studio binds to `http://127.0.0.1:54322`. If port 54322 is already in use by another app, it automatically scans subsequent ports (`54323`, `54324`, etc.). If an older `abug` instance is already running, it automatically opens that existing instance in a new browser tab without duplication.
+> - **Zero Cloud / All Offline**: All 5 Real-ESRGAN and 2 RIFE neural models are bundled in the `models/` directory. No internet connection, API keys, or remote servers are used.
+> - **Chrome-First macOS Launch**: On macOS, the launcher prioritizes opening Google Chrome for optimal hardware canvas acceleration, falling back to the default system browser if Chrome is absent.
+> - **Interactive 3D Neural Motion UI**: Featuring a real-time interactive 3D neural core visualization, modal card selectors for upscaling models and tile sizes, sequential image batch queueing with progress indicators, and offline ZIP exports.
 
 #### Option 2: From Cloned Source
 ```bash

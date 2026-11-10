@@ -30,6 +30,10 @@
 
 ---
 
-### 📦 Download APK
-* **File**: `app-debug.apk` (74 MB)
-* **Target Architecture**: Android ARM64-v8a (Android 8.0+)
+### 📦 Downloads & Releases
+
+* 📱 **Mobile (Android APK)**: [**abug-v1.0.0.apk**](https://github.com/duplexspy/Abug/releases/download/v1.0.0/abug-v1.0.0.apk) (74 MB)  
+  *Target Architecture*: Android ARM64-v8a (Android 8.0+)
+* 💻 **Laptop / Desktop (Windows, macOS, Linux ZIP)**: [**Abug-Studio.zip**](https://github.com/duplexspy/Abug/releases/download/v1.0.0/Abug-Studio.zip) (62 MB)  
+  *Pre-packaged standalone studio with local Web UI, native C++ CLI, and bundled offline AI models.*
+

@@ -11,3 +11,7 @@
 *.apk
 *.mp4
 attachments/
+__pycache__/
+*.pyc
+*.zip
+build-macos/

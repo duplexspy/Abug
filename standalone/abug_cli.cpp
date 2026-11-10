@@ -4,6 +4,7 @@
 #include <chrono>
 #include <cstring>
 #include <cstdlib>
+#include <math.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "app/src/main/cpp/ncnn_install/include/ncnn/stb_image.h"

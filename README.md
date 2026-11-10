@@ -49,11 +49,13 @@
 
 ### 💻 2. On Laptops & Desktops (Windows, macOS, Linux)
 #### Standalone Desktop Studio (One-Click)
-1. Download **[abug-standalone-v1.0.0.tar.gz](https://github.com/duplexspy/Abug/releases/download/v1.0.0/abug-standalone-v1.0.0.tar.gz)** (or clone this repo).
-2. Launch the studio:
-   - **Windows**: Double-click `standalone\run_desktop.bat` (or run `python standalone/abug_standalone.py`).
-   - **macOS / Linux**: Run `./standalone/run_desktop.sh`.
-3. Opens the interactive **abug Desktop Studio** at `http://localhost:54321` in your browser.
+1. Download **[Abug-Studio.zip](https://github.com/duplexspy/Abug/releases/download/v1.0.0/Abug-Studio.zip)** (~64 MB) from GitHub Releases.
+2. Extract the ZIP archive anywhere on your laptop.
+3. Launch the studio:
+   - **macOS (Apple Silicon M1/M2/M3/M4 & Intel)**: Double-click `RUN_MAC_STUDIO.command` (or run `bash INSTALL_ABUG_COMMAND.command` once, then type `abug` in Terminal). Opens automatically in **Google Chrome**.
+   - **Windows**: Double-click `run_desktop.bat` (or run `python abug_standalone.py`).
+   - **Linux**: Double-click or run `./run_desktop.sh`.
+4. Opens the interactive **abug Desktop Studio** at `http://127.0.0.1:54322` in your browser.
 
 #### Terminal CLI
 ```bash
