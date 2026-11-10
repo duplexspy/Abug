@@ -10,4 +10,4 @@
 .cxx
 *.apk
 *.mp4
-!attachments/
+attachments/
